@@ -1,3 +1,5 @@
+require("mason").setup({})
+
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
@@ -187,20 +189,6 @@ vim.lsp.config("clangd", {
             end
         end
     end,
-})
-
--- clangd_esp32 (ESP-IDF / Xtensa / PlatformIO)
-vim.lsp.config("clangd_esp32", {
-    cmd = {
-        "clangd",
-        "--background-index",
-        "--query-driver="
-        .. vim.fn.expand("~") .. "/.platformio/packages/toolchain-xtensa-esp32/bin/xtensa-esp32-elf-*,"
-        .. vim.fn.expand("~") .. "/.espressif/tools/xtensa-esp-elf/*/bin/xtensa-esp*-elf-*",
-    },
-    filetypes = { "h", "c", "cpp", "cc", "objc", "objcpp" },
-    root_markers = { "sdkconfig", "idf_component.yml", "platformio.ini" },
-    single_file_support = false,
 })
 
 -- dockerls

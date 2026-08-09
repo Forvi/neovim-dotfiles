@@ -20,7 +20,6 @@ vim.opt.timeoutlen = 300
 vim.opt.updatetime = 100
 vim.opt.swapfile = false
 
-require("git")
 vim.opt.laststatus = 3
 vim.opt.statusline = '%f%m%r%h%w' .. '%{%v:lua.get_git_branch()%}' .. '%= %y %p%% %l:%c'
 vim.opt.cmdheight = 1
