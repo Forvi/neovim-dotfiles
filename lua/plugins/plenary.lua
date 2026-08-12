@@ -1,0 +1,1 @@
+require("plenary.nvim").setup({})

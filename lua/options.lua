@@ -22,7 +22,7 @@ vim.opt.swapfile = false
 
 vim.opt.laststatus = 3
 vim.opt.statusline = '%f%m%r%h%w' .. '%{%v:lua.get_git_branch()%}' .. '%= %y %p%% %l:%c'
-vim.opt.cmdheight = 1
+vim.opt.cmdheight = 0
 vim.opt.signcolumn = "yes"
 
 vim.opt.undofile = true
